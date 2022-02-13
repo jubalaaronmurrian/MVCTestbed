@@ -22,6 +22,8 @@
 		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
 	</PropertyGroup>
 	
+	<!-- https://github.com/RicoSuter/NSwag/wiki/NSwag.MSBuild -->
+	<!-- https://github.com/RicoSuter/NSwag/wiki/CommandLine#execute-nswag-configuration-document -->
 	<!-- EnvironmentVariables="ASPNETCORE_ENVIRONMENT=Development" -->
 	<!-- https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-5.0 -->
 
