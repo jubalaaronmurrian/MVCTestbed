@@ -34,6 +34,8 @@
     $(document).ready(function(){
         $('#numbers').val('Two');
         $('#numbers').trigger('change');
+        let event = new Event('change');
+        nativeElement.dispatchEvent(event);
         logSelected();
     });
 
@@ -47,3 +49,5 @@
 </script>
 
 }
+
+
