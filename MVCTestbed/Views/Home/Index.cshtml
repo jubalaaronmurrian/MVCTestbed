@@ -6,3 +6,44 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<select id="numbers">
+    <option>One</option>
+    <option>Two</option>
+    <option>Three</option>
+</select>
+
+@section Scripts{
+
+<script type="text/javascript">
+
+
+    let nativeElement = document.getElementById('numbers');
+    nativeElement.addEventListener("change", function () {
+        alert(`Native Element Changed ${this.value}`);
+    });
+
+    //https://api.jquery.com/selected-selector/
+
+    $('#numbers').change(function () {
+        let value = $('#numbers').val();
+        logSelected();
+        alert(`jQuery Changed ${value}`);
+    });
+
+    $(document).ready(function(){
+        $('#numbers').val('Two');
+        $('#numbers').trigger('change');
+        logSelected();
+    });
+
+    function logSelected() {
+        let selected = $("select option:selected");
+        selected.each(function () {
+            console.log($(this).text());
+        });
+    }
+
+</script>
+
+}
